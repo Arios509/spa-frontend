@@ -1,0 +1,62 @@
+<form [formGroup]="customerForm" (ngSubmit) ="onSubmit()">
+
+    <div class="form-group">
+        <label for="lastname">Lastname *</label>
+        <input id="lastname" type="text" class="form-control" formControlName="lastname"  placeholder="Enter lastname" [ngClass]="{ 'is-invalid': f.lastname.touched && f.lastname.errors }">
+        <div class="invalid-feedback" *ngIf="f.lastname.touched && f.lastname.errors">
+            <div *ngIf="f.lastname.errors.required">You need to fill in lastname</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname">Firstname *</label>
+        <input id="firstname" type="text" class="form-control" formControlName="firstname"  placeholder="Enter firstname" [ngClass]="{ 'is-invalid': f.firstname.touched && f.firstname.errors }">
+        <div class="invalid-feedback" *ngIf="f.firstname.touched && f.firstname.errors">
+            <div *ngIf="f.firstname.errors.required">You need to fill in firstname</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="company">Company name *</label>
+        <input id="company" type="text" class="form-control" formControlName="company"  placeholder="Enter company name" [ngClass]="{ 'is-invalid': f.company.touched && f.company.errors }">
+        <div class="invalid-feedback" *ngIf="f.company.touched && f.company.errors">
+            <div *ngIf="f.company.errors.required">You need to fill in company name</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address *</label>
+        <input id="address" type="text" class="form-control" formControlName="address"  placeholder="Enter address" [ngClass]="{ 'is-invalid': f.address.touched && f.address.errors }">
+        <div class="invalid-feedback" *ngIf="f.address.touched && f.address.errors">
+            <div *ngIf="f.address.errors.required">You need to fill in address</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="city">City *</label>
+        <input id="city" type="text" class="form-control" formControlName="city"  placeholder="Enter city" [ngClass]="{ 'is-invalid': f.city.touched && f.city.errors }">
+        <div class="invalid-feedback" *ngIf="f.city.touched && f.city.errors">
+            <div *ngIf="f.city.errors.required">You need to fill in city</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="postcode">Postcode *</label>
+        <input id="postcode" type="number" class="form-control" formControlName="postcode"  placeholder="Enter postcode" [ngClass]="{ 'is-invalid': f.postcode.touched && f.postcode.errors }">
+        <div class="invalid-feedback" *ngIf="f.postcode.touched && f.postcode.errors">
+            <div *ngIf="f.postcode.errors.required">You need to fill in postcode</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="country">Country *</label>
+        <input id="country" type="text" class="form-control" formControlName="country"  placeholder="Enter country" [ngClass]="{ 'is-invalid': f.country.touched && f.country.errors }">
+        <div class="invalid-feedback" *ngIf="f.country.touched && f.country.errors">
+            <div *ngIf="f.country.errors.required">You need to fill in country</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="joineddate">Joined date *</label>
+        <input id="joineddate" type="date" class="form-control" formControlName="joineddate"  placeholder="Enter joined date" [ngClass]="{ 'is-invalid': f.joineddate.touched && f.joineddate.errors }">
+        <div class="invalid-feedback" *ngIf="f.joineddate.touched && f.joineddate.errors">
+            <div *ngIf="f.joineddate.errors.required">You need to fill in joined date</div>
+        </div>
+      </div>
+
+
+    <button type="submit" class="btn btn-primary" [disabled]="customerForm.invalid">Submit</button>
+</form>
