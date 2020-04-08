@@ -37,8 +37,9 @@ export class AuthInterceptor implements HttpInterceptor {
 
 
                         }, error => {
-                            alert('Please login again');
                             this.router.navigate(['login']);
+localStorage.clear();
+                            alert('Please login again');
 
                         });
                     }

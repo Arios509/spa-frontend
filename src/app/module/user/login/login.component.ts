@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-    if(localStorage.getItem('REFRESH_TOKEN')){
+    if (localStorage.getItem('REFRESH_TOKEN')) {
       this.router.navigate(['main/home'])
     }
     this.initialForm();
@@ -47,6 +47,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.subscriptions.push(
       this._authService.loginUser(this.f.username.value, this.f.password.value).subscribe(async (res) => {
         await this.router.navigate(['main/home']);
+      }, error => {
+        alert(error.error.message)
       }));
   }
 }
