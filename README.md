@@ -9,23 +9,23 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Login to existing account
 
 After open `http://localhost:4200/`, it will show one login page. Sign in with registerd account, if not, can click the sign up button to create one account.
-![login page](assets/images/login.png)
+![login page](https://i.imgur.com/fSOlE0N.png)
 
 ## Sign up page
 Sign up with user name and password, password validation is implemented.
-![singup page](assets/images/signup.png)
+![singup page](https://i.imgur.com/V9Lb5ih.png)
 
 ## After login
 The page will direct to the home page
 
-![home page](assets/images/home.png)
+![home page](https://i.imgur.com/Lh5YqwK.png)
 
 ## Create new customer
 The page will direct to the home page
 
-![create page](assets/images/create.png)
+![create page](https://i.imgur.com/pG8aKHa.png)
 
 ## Detail
 The page will direct to the home page
 
-![detail page](assets/images/detail.png)
+![detail page](https://i.imgur.com/RsPPolr.png)
