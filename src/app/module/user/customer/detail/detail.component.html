@@ -1,50 +1,55 @@
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-        <td style="width: 20%;">#</td>
-        <td>Details</td>
+<div class="card">
+  <div class="card-content">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <td style="width: 20%;">#</td>
+            <td>Details</td>
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lastname</td>
+            <td> {{detail.lastname}}</td>
+          </tr>
+          <tr>
+            <td>Firstname</td>
+            <td> {{detail.firstname}}</td>
+          </tr>
+          <tr>
+            <td>Company name</td>
+            <td> {{detail.company}}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td> {{detail.address}}</td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td> {{detail.city}}</td>
+          </tr>
+          <tr>
+            <td>Postcode</td>
+            <td> {{detail.postcode}}</td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td> {{detail.country}}</td>
+          </tr>
+          <tr>
+            <td>Joined date</td>
+            <td> {{detail.joineddate}}</td>
+          </tr>
+    
+        </tbody>
+      </table>
+        <button (click)="edit(detail)" class="btn btn-primary m-1"><i class="fas fa-edit"></i> Edit</button>
+        <button (click)="remove(detail.id)" class="btn btn-danger m-1"><i class="fas fa-trash-alt"></i>Delete</button>
+    </div>
 
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Lastname</td>
-        <td> {{detail.lastname}}</td>
-      </tr>
-      <tr>
-        <td>Firstname</td>
-        <td> {{detail.firstname}}</td>
-      </tr>
-      <tr>
-        <td>Company name</td>
-        <td> {{detail.company}}</td>
-      </tr>
-      <tr>
-        <td>Address</td>
-        <td> {{detail.address}}</td>
-      </tr>
-      <tr>
-        <td>City</td>
-        <td> {{detail.city}}</td>
-      </tr>
-      <tr>
-        <td>Postcode</td>
-        <td> {{detail.postcode}}</td>
-      </tr>
-      <tr>
-        <td>Country</td>
-        <td> {{detail.country}}</td>
-      </tr>
-      <tr>
-        <td>Joined date</td>
-        <td> {{detail.joineddate}}</td>
-      </tr>
+  </div>
+</div>
 
-    </tbody>
-  </table>
-</div>
-<div class="row">
-    <button (click)="edit(detail)" class="btn btn-primary m-1"><i class="fas fa-edit"></i> Edit</button>
-    <button (click)="remove(detail.id)" class="btn btn-danger m-1"><i class="fas fa-trash-alt"></i>Delete</button>
-</div>
+

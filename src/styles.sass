@@ -1,60 +1,58 @@
+$font-default : 'Open sans'
+$title-color: white
+$--bg-primary: #23232e
+$card-shadow: 0 4px 8px rgba(0,0,0,0.38)
+$card-radius: 0.25em
+// Small screen 
+@mixin for-phone-only 
+  @media only screen and (max-width: 599px) 
+    @content
+// Large screen
+@mixin for-tablet-only 
+  @media only screen and (min-width: 599px) 
+    @content
+
 body
-    margin: 0
-
-.card
-    height: 370px
-    margin-top: auto
-    margin-bottom: auto
-    width: 400px
-    background-color: rgba(0,0,0,0.5) !important
-
-.social_icon span
-    font-size: 60px
-    margin-left: 10px
-    color: #FFC312
-
-.social_icon span:hover
-    color: white
-    cursor: pointer
-
-.card-header h3
-    color: white
-
-.social_icon
-    position: absolute
-    right: 20px
-    top: -45px
-
-.input-group-prepend span
-    width: 50px
-    background-color: #FFC312
-    color: black
-    border: 0 !important
-
-input:focus
-    outline: 0 0 0 0  !important
-    box-shadow: 0 0 0 0 !important
-
-.remember
-    color: white
-
-.remember input
-    width: 20px
-    height: 20px
-    margin-left: 15px
-    margin-right: 5px
-
-.login_btn
-    color: black
-    background-color: #FFC312
-    width: 100px
-
-.login_btn:hover
     color: black
     background-color: white
+    margin: 0 !important
+    padding: 0
+    font-family: $font-default
 
-.links
-    color: white
+    ::-webkit-scrollbar
+        width: 0.25rem
 
-.links a
-    margin-left: 4px
+    ::-webkit-scrollbar-track
+        background: #1e1e24
+
+    ::-webkit-scrollbar-thumb
+        background: #6649b8
+
+.dark-theme
+    background: #12181b
+    color: #b2becd
+    transition: all .3s ease
+
+.card
+    background: #2a2e35
+    color: #ffffff
+    padding: 0
+    box-shadow: $card-shadow
+    display: inline-flex
+    flex-direction: column
+    margin: 1em 0 1em
+    width: 100%
+    transform: translateY(0)
+    border-radius: $card-radius
+
+.card-course
+    max-width: 720px
+    text-align: center
+    margin: 1em auto
+    @include for-phone-only
+        max-width: 320px
+
+.card
+    .card-content
+        padding: 1em
+

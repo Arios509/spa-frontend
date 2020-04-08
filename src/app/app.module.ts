@@ -7,10 +7,12 @@ import { UserModule } from './module/user/user.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { AuthInterceptor } from './core/_helpers/auth-interceptor';
+import { NotfoundComponent } from './module/notfound/notfound.component';
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

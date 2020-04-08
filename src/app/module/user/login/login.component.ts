@@ -18,14 +18,16 @@ export class LoginComponent implements OnInit, OnDestroy {
     private router: Router) { }
 
   ngOnInit(): void {
+
+    if(localStorage.getItem('REFRESH_TOKEN')){
+      this.router.navigate(['main/home'])
+    }
     this.initialForm();
   }
   ngOnDestroy(): void {
-    // Called once, before the instance is destroyed.
-    // Add 'implements OnDestroy' to the class.
-
     this.subscriptions.forEach(subscription => subscription.unsubscribe());
   }
+
   // Initial form
   initialForm = () => {
     console.log('test');
@@ -40,10 +42,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   get f() { return this.loginForm.controls; }
 
   // Login submit
-  onSubmit =  () => {
+  onSubmit = () => {
 
     this.subscriptions.push(
-       this._authService.loginUser(this.f.username.value, this.f.password.value).subscribe( async (res) => {
+      this._authService.loginUser(this.f.username.value, this.f.password.value).subscribe(async (res) => {
         await this.router.navigate(['main/home']);
       }));
   }
